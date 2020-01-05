@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const filmController = {};
 const Film = require('../film.js');
 
-    
+
 
 filmController.get = (req, res) => {
-    console.log('el get ha sido invocado')
+
     Film.find({}, (err, results) => {
         if (err) {
             res.status(500).send({ message: 'Error 500' })
