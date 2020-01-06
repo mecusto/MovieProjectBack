@@ -8,6 +8,7 @@ const cors = require("cors");
 const router = require('./routes/router');
 
 const Film = require('./film');
+const User = require('./user');
 
 app.use(cors());
 
@@ -28,6 +29,7 @@ var mongoOptions = {
     // pass: "m001-mongodb-basics",
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
     dbName: 'video'
 };
 const uri = "mongodb://localhost:27017/video"
@@ -41,6 +43,5 @@ try {
     handleError(error);
 }
 
-//app.get('/', (req, res) => res.send('Hello World!'))
 
 module.exports = app;

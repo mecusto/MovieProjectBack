@@ -22,7 +22,6 @@ const FilmSchema = new Schema({
     userReviews: Number,
     metacritic: Number,
     awards: Object,
-    nominations: Object,
     type: String
 })
 

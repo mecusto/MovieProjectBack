@@ -7,8 +7,13 @@ const userController = require("../controllers/userController.js")
 
 
 router.get('/', filmController.get);
-router.get("/users", userController.getUser)
+router.post('/search/', filmController.search);
+
+router.get("/users", userController.getusers)
 router.post("/users", userController.createUser)
 
+router.get('/user/:_id', userController.getUser)
+
+router.post('/user/update/:_id', userController.updateFilmography)
 
 module.exports = router;
