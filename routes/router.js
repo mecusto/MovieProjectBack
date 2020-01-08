@@ -8,6 +8,7 @@ const userController = require("../controllers/userController.js")
 router.get('/', filmController.get);
 router.get("/users", userController.getUser)
 router.post("/users", userController.createUser)
+router.get("/user/:userId", userController.getOneUser)
 
 
 module.exports = router;

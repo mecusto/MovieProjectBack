@@ -63,5 +63,12 @@ userController.updateFilmography = (req, res) => {
     })
 }
 
+userController.getOneUser = (req, res) => {
+    const { userId } = req.params
+    User.find({ _id: userId }, (err, user) => {
+        if (err) res.status(500).send("No se encuentra el usuario")
 
+        res.status(200).send({ user })
+    })
+}
 module.exports = userController;
